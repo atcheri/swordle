@@ -1,7 +1,7 @@
 <script lang="ts">
   import Line from "./Line.svelte";
 
-  const tries = [0, 1, 2, 3, 4];
+  const tries = [0, 1, 2, 3, 4, 5];
 </script>
 
 <div class="flex flex-col gap-1">

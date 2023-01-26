@@ -4,6 +4,7 @@
     guesses,
     maxGuessLength,
     rank,
+    word,
   } from "../../swordle-store";
   import Line from "./Line.svelte";
 
@@ -18,6 +19,11 @@
 
 <div class="flex flex-col gap-1">
   {#each $guesses as guess, i}
-    <Line word={chooseGuessToDisplay($currentGuess, guess, i === $rank)} />
+    {@const editing = i === $rank}
+    <Line
+      {editing}
+      currentGuess={chooseGuessToDisplay($currentGuess, guess, editing)}
+      solution={$word}
+    />
   {/each}
 </div>

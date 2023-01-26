@@ -20,7 +20,7 @@
       );
       return;
     }
-    guess.update((g) => g + letter);
+    guess.update((g) => g + letter.toUpperCase());
   };
 
   const onDelete = () => {

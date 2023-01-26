@@ -4,7 +4,8 @@ import { writable } from "svelte/store";
 export const maxGuessLength = 5;
 export const maxTries = 6;
 
-export const generateWord = () => faker.word.noun({ length: maxGuessLength });
+export const generateWord = () =>
+  faker.word.noun({ length: maxGuessLength }).toUpperCase();
 
 export const word = writable(generateWord());
 export const guess = writable("");
